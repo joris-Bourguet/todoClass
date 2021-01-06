@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  bottom: 0;
+}
+
+main {
+  background-color: gainsboro;
+  padding: 1em 5em;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "tasksencours tasksfini";
+  -ms-grid-columns: 1fr 20px 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  gap: 20px;
+}
+main #tasks {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: tasksencours;
+}
+main #tasks_finish {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: tasksfini;
+}
+/*# sourceMappingURL=style.css.map */

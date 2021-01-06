@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    padding: 0;
+    bottom: 0;
+}
+
+main {
+    background-color: gainsboro;
+    padding: 1em 5em;
+    display: grid;
+    grid-template-areas: "tasksencours tasksfini";
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    gap: 20px;
+    #tasks {
+        grid-area: tasksencours;
+    }
+    #tasks_finish {
+        grid-area: tasksfini;
+    }
+}
