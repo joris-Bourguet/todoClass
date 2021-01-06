@@ -27,6 +27,9 @@ function createNewTask() {
 
 function addTask(addtask) {
     let newLi = document.createElement("li");
+    newLi.addEventListener('dblclick', (e) => {
+        endTask(e)
+    })
     let newDiv = document.createElement("div");
     let newSpan = document.createElement("span");
     let newButton = document.createElement("button");
@@ -55,6 +58,18 @@ function addTask(addtask) {
 
 function countList() {
     txt_counter.textContent = listTodo.children.length
+}
+
+function unFinishTask(e) {
+    let li = e.target
+    listTodo.append(li)
+    countList()
+}
+
+function endTask(e) {
+    let li = e.target
+    listDone.append(li)
+    countList()
 }
 
 function removeTask(e) {
