@@ -24,6 +24,9 @@ main #tasks {
   -ms-grid-column: 1;
   grid-area: tasksencours;
 }
+main #tasks ul li div span {
+  margin: 0 10px 0;
+}
 main #tasks_finish {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
